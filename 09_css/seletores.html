@@ -6,10 +6,96 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        #aninhado > div{
+        /*https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Selectors*/
+        /* selector universal */
+        /* 
+        * {
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+
+        /* tag */
+        /* 
+        div{
             color: #ff0;
             background-color: #f77;
         }
+        */
+
+        /* .class */
+        /* 
+        .tag{
+            color: #ff0;
+            background-color: #f77;
+        }
+         */
+
+        /* #ID */
+        /* 
+        #aprovados{
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+        /* aninhados ou filho direito */
+        /* 
+        #aninhado > div{
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+
+        /* qualquer filhos  */
+        /* 
+        #aninhado  section{
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+
+
+        /* irmão adjacentes que seguem imediatamente*/
+        /* 
+        p + ul{
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+        /* irmão  que seguem não necessariamente imediatamente*/
+        /* 
+        p ~ ol{
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+        
+        /* atributo */
+        /* [feira*=sa] */
+        /* [feira~=escritorio] */
+        /*         
+        [feira=casa]{
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+        /* primeiro filho da  da tag span*/
+        /* 
+        span:nth-child(1){
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* filhos impar odd ou even par*/
+        section > :nth-child(odd){
+            color: #ff0;
+            background-color: #f77;
+        }
+
     </style>
 </head>
 
@@ -32,7 +118,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
