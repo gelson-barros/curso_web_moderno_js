@@ -10,7 +10,21 @@
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        // ...
+        document.querySelector('#primeiro').classList.add('destaque');
+
+        const selecionar = selector => document.querySelectorAll(selector).forEach(e => e.classList.add('destaque'))
+        /*
+        dir(selecionar) no console.log
+        retornar um NodeList que da para trabalhar com foreach
+        */
+       const deselecionar = selector => document.querySelectorAll(selector).forEach(e => e.classList.remove('destaque'))
+
+        selecionar('div');
+
+        deselecionar('*');
+        selecionar('.terceiro.ultimo')
+        deselecionar('*');
+        selecionar(':not(#primeiro)');
     </script>
 </body>
 </html>
